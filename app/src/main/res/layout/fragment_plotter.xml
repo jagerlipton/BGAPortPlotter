@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.plotter.PlotterFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guideline_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/actionbarGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="?android:attr/actionBarSize" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideline_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideline_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/guideline_margin" />
+
+
+    <TextView
+        android:id="@+id/hintStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status"
+        app:layout_constraintBottom_toTopOf="@+id/actionbarGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/statusTextView" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disconnected"
+        android:layout_marginStart="@dimen/label_margin"
+        app:layout_constraintBottom_toTopOf="@+id/actionbarGuideline"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintStart_toEndOf="@+id/hintStatusTextView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/navigateToOptionsButton"
+        android:src="@drawable/ic_baseline_settings_24"
+        app:layout_constraintTop_toBottomOf="@id/topGuideline"
+        app:layout_constraintBottom_toTopOf="@+id/actionbarGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        android:visibility="invisible" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/label_margin"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@id/actionbarGuideline"
+        app:layout_constraintBottom_toTopOf="@+id/lastMessageRecycler" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lastMessageRecycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            tools:listitem="@layout/last_message_item"
+            android:scrollbars="vertical"
+            android:layout_marginEnd="@dimen/label_margin"
+            app:layout_constraintTop_toTopOf="@+id/clearButton"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton"
+            app:layout_constraintBottom_toBottomOf="@+id/saveButton" />
+
+          <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/savebutton"
+            app:layout_constraintEnd_toEndOf="@+id/endGuideline"
+            app:layout_constraintBottom_toBottomOf="@+id/bottomGuideline" />
+          <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clearbutton"
+            app:layout_constraintBottom_toTopOf="@+id/saveButton"
+            app:layout_constraintEnd_toEndOf="@+id/endGuideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

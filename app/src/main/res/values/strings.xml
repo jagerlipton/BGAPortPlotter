@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PortPlotter</string>
+    <string name="title_connection">Connection</string>
+    <string name="title_plotter">Plotter</string>
+    <string name="title_options">Options</string>
+    <string name="status">Status:</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="usb">USB</string>
+    <string name="bt">BT</string>
+    <string name="bg">bg</string>
+    <string name="settings">Settings</string>
+
+    <string name="label_connected">Connected</string>
+    <string name="label_disconnected">Disconnected</string>
+
+    <string name="label_supported">Supported</string>
+    <string name="label_unsupported">Unsupported</string>
+    <string name="baudrate">Baudrate:</string>
+    <string name="navigateToChart">To Chart</string>
+    <string name="usbservice">USB Service:</string>
+    <string name="chipset">Chipset:</string>
+    <string name="supported">Supported:</string>
+    <string name="vid">VID:</string>
+    <string name="pid">PID:</string>
+    <string name="save_image_to_gallery">Save as PNG</string>
+    <string name="save_to_csv">Save as CSV</string>
+    <string name="savebutton">Save</string>
+    <string name="clearbutton">Clear</string>
+    <string name="portPlotter">Plotter</string>
+
+    <string-array name="speed">
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>921600</item>
+    </string-array>
+
+</resources>

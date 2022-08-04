@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_connection">
+
+    <fragment
+        android:id="@+id/navigation_connection"
+        android:name="com.jagerlipton.bgaportplotter.presentation.ui.connection.ConnectionFragment"
+        android:label="@string/title_connection"
+        tools:layout="@layout/fragment_connection" >
+        <action
+            android:id="@+id/action_navigation_connection_to_navigation_plotter"
+            app:destination="@id/navigation_plotter"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_connection"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_navigation_connection_to_navigation_options"
+            app:destination="@id/navigation_options"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_connection"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plotter"
+        android:name="com.jagerlipton.bgaportplotter.presentation.ui.plotter.PlotterFragment"
+        android:label="@string/title_plotter"
+        tools:layout="@layout/fragment_plotter" >
+        <action
+            android:id="@+id/action_navigation_plotter_to_navigation_options"
+            app:destination="@id/navigation_options"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_plotter"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_plotter_to_navigation_connection"
+            app:destination="@id/navigation_connection"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/navigation_plotter"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_options"
+        android:name="com.jagerlipton.bgaportplotter.presentation.ui.options.OptionsFragment"
+        android:label="@string/title_options"
+        tools:layout="@layout/fragment_options" />
+</navigation>

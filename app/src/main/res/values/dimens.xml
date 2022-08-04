@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="guideline_margin">8dp</dimen>
+    <dimen name="label_margin">8dp</dimen>
+    <dimen name="bgImage_scale">0.4</dimen>
+    <dimen name="bgImage_alpha">0.2</dimen>
+    <dimen name="spinner_min_height">48dp</dimen>
+    <dimen name="splitter_width">1dp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BGAPortPlotter" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/actionbar</item>
+        <item name="colorPrimaryVariant">@color/actionbar</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/actionbar</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
